@@ -48,6 +48,13 @@ class Document
     end
   end
   
+  # Given a number, which needs to be an instance of Numeric,
+  # return true if the number of characters in the document
+  # exceeds the number.
+  def is_longer_than?( number_of_characters )
+    @content.length > number_of_characters
+  end
+  
   def clone
     Document.new( title.clone, author.clone, content.clone )
   end
